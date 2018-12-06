@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Misc20</title>
+</head>
+<body>
+
+<script>
+    var array = [2, [4, 5], 5, [2, 3], 3, [7, 5]];
+    var newArray = [];
+    for (i=0; i<array.length; i++){
+        if (array[i].length > 1){
+            var arraySum = 0;
+            for (j=0; j<array[i].length; j++){
+                arraySum += array[i][j];
+            }
+            console.log("Sum :" +arraySum);
+            newArray.push(arraySum);
+        }
+        else {
+            var int = array[i];
+            console.log("Int: " + int);
+            newArray.push(int)
+        }
+    }
+    console.log(newArray);
+    for(i=0; i<newArray.length; i++){
+        if (i%2 === 0){
+            var output;
+            output = newArray[i]*newArray[i+1];
+            console.log(newArray[i] + " x " + newArray[i+1] + " = " + output);
+        }
+    }
+</script>
+
+</body>
+</html>
